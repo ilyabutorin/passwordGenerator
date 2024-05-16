@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="leftContainer">
+            <div>
+                <h1>{ Pasword Generator }</h1>
+                <h2>Here you can generate new<br>and secure password for yourself</h2>
+                <p>But be careful and don't forget it</p>
+            </div>
+            <div class="about">
+                <p>Ilya Butorin : 2024 :</p>
+                <div class="social">
+                    <a href="https://github.com/ilyabutorin" target="_blank">
+                        <img src="./img/github.png" alt="GitHub">
+                    </a>
+                    <a href="https://www.linkedin.com/in/ilya-butorin/" target="_blank">
+                        <img src="./img/linkedin.png" alt="LinkedIn">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="rightContainer">
+            <div class="inputBlock">
+                <input type="text" id="password" readonly>
+                <img src="./img/copy.png" alt="copy-img" onclick="copyPassword()">
+            </div>
+
+            <fieldset>
+                <legend>Password Options</legend>
+                <label for="length">Password Length:</label>
+                <select id="length">
+                    <option value="8">8</option>
+                    <option value="10">10</option>
+                    <option value="12" selected>12</option>
+                    <option value="14">14</option>
+                    <option value="16">16</option>
+                    <option value="18">18</option>
+                    <option value="20">20</option>
+                </select>
+                <div>
+                    <input type="checkbox" id="uppercase" checked> <label for="uppercase">Uppercase Letters</label><br>
+                    <input type="checkbox" id="lowercase" checked> <label for="lowercase">Lowercase Letters</label><br>
+                    <input type="checkbox" id="numbers" checked> <label for="numbers">Numbers</label><br>
+                    <input type="checkbox" id="symbols" checked> <label for="symbols">Symbols</label>
+                </div>
+            </fieldset>
+            <button id="generate">Generate</button>
+        </div>
+    </div>
+</body>
+
+</html>
